@@ -1,34 +1,52 @@
-## Gym Management App
+# 🏋️ Gym Management App (Red Vibe Edition)
 
-A comprehensive Java-based gym management system with user authentication and role-based dashboards for members, trainers, and gym owners.
+A professional-grade Android application designed for gym management, featuring a sleek dark-themed UI with role-based access for **Gym Owners** and **Trainees**.
 
-## Screenshots
+## 📱 Project Overview
+This app bridges the gap between trainers and trainees using a local SQLite architecture. It allows owners to manage their client base through unique invite codes and provides trainees with a gamified dashboard to track their fitness journey.
 
-| Screen           | Description                                   | Screenshot                      |
-|------------------|-----------------------------------------------|---------------------------------|
-| Login Screen     | User login interface for the application.     | ![Login Screen](login.jpeg)     |
-| Owner Dashboard  | Dashboard for gym owners to manage operations.| ![Owner Dashboard](owner_dash.jpeg) |
-| Trainee Dashboard | Dashboard for trainees to view workouts.      | ![Trainee Dashboard](trainee_dash.jpeg) |
+## ✨ Key Features
 
-## Features
+### 👑 Owner Dashboard
+- **Unique Code Generation:** Every owner gets a unique 6-digit code for trainee registration.
+- **Trainee Management:** View a list of all joined trainees with custom expandable cards.
+- **Progress Tracking:** Update trainee stats like Membership days, Missed days, Calories, and Workout time in real-time.
+- **Notification System:** A dedicated request area to approve or deny new trainees.
 
-- User authentication and login system
-- Role-based access control (Owner, Trainer, Trainee)
-- Owner dashboard for gym management
-- Trainee dashboard for workout tracking
-- Trainer tools for workout management
+### 👟 Trainee Dashboard
+- **Dynamic Profile:** Personalized welcome screen with custom avatars (Titan, Warrior, Beast, etc.).
+- **Health Hub:** Interactive "Indian Dish of the Day" and "Traditional Gym Routine" sections.
+- **Live Stats:** Real-time view of workout progress assigned by the trainer.
+- **Custom Avatars:** Choose from a set of professional gym avatars or upload from the gallery.
 
-## Tech Stack
+## 🛠️ Tech Stack
+- **Language:** Java
+- **UI Framework:** XML (Material Design 3)
+- **Database:** SQLite (Local Persistence)
+- **Components:** RecyclerView, ConstraintLayout, SharedPreferences, Custom Adapters.
 
-- **Language**: Java
-- **Build Tool**: Gradle
+## 📊 Project Stats
+- **Total Lines of Code:** ~2,250
+- **Architecture:** Local-first (SQLite)
+- **UI Theme:** Dark/High-Contrast Red (#1A1A1A & @color/red)
 
-## Getting Started
+## 📸 Screenshots
+> *Tip: Upload your screenshots to a `screenshots` folder in your repo and link them here!*
+<table>
+  <tr>
+    <td><img src="screenshots/login.jpeg" width="200"></td>
+    <td><img src="screenshots/owner_dash.jpeg" width="200"></td>
+    <td><img src="screenshots/trainee_dash.jpeg" width="200"></td>
+  </tr>
+</table>
 
-1. Clone the repository
-2. Build the project using Gradle: `./gradlew build`
-3. Run the application
+## 🚀 How to Use
+1. **Clone the repo:** `git clone https://github.com/VibhorShr/Gym_Management_App.git`
+2. **Open in Android Studio:** Ensure you have the latest Arctic Fox or Giraffe version.
+3. **Run:** Deploy on an emulator or physical device (Android 8.0+ recommended).
 
-## Contributing
+## 📝 Author
+**Vibhor** - [GitHub Profile](https://github.com/VibhorShr)
 
-Feel free to fork this repository and submit pull requests for any improvements.
+---
+*Developed with Vibe Coding energy.* 🚀
