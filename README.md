@@ -31,7 +31,6 @@ This app bridges the gap between trainers and trainees using a local SQLite arch
 - **UI Theme:** Dark/High-Contrast Red (#1A1A1A & @color/red)
 
 ## 📸 Screenshots
-> *Tip: Upload your screenshots to a `screenshots` folder in your repo and link them here!*
 <table>
   <tr>
     <td><img src="login.jpeg" width="200"></td>
@@ -48,5 +47,4 @@ This app bridges the gap between trainers and trainees using a local SQLite arch
 ## 📝 Author
 **Vibhor** - [GitHub Profile](https://github.com/VibhorShr)
 
----
-*Developed with Vibe Coding energy.* 🚀
+
