@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="User Profile"
+        android:textColor="@color/red"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_current_profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="@color/red"
+                app:strokeWidth="4dp" />
+
+            <Spinner
+                android:id="@+id/avatar_spinner"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_current_profile"
+                app:layout_constraintEnd_toEndOf="@+id/iv_current_profile"
+                app:layout_constraintStart_toStartOf="@+id/iv_current_profile"
+                app:layout_constraintTop_toTopOf="@+id/iv_current_profile" />
+
+            <!-- Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_name_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Full Name"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/iv_current_profile">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_email_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Email"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_name_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_password_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Password"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_email_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_address_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Address"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_password_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Number -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_number_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Phone Number"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_address_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Detail 1: Age -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_age_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Age"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_number_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Detail 2: Weight -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_weight_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Weight (kg)"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_age_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Detail 3: Height -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_height_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Height (cm)"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_weight_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Detail 4: Gender -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_gender_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Gender"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_height_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Detail 5: Unique Code -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_unique_code_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="6-Digit Unique Code"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/red"
+                app:hintTextColor="@color/red"
+                app:layout_constraintTop_toBottomOf="@+id/profile_gender_layout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_profile_unique_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_save_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/red"
+                android:text="Save Changes"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_unique_code_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
