@@ -34,9 +34,9 @@ This app bridges the gap between trainers and trainees using a local SQLite arch
 > *Tip: Upload your screenshots to a `screenshots` folder in your repo and link them here!*
 <table>
   <tr>
-    <td><img src="screenshots/login.jpeg" width="200"></td>
-    <td><img src="screenshots/owner_dash.jpeg" width="200"></td>
-    <td><img src="screenshots/trainee_dash.jpeg" width="200"></td>
+    <td><img src="login.jpeg" width="200"></td>
+    <td><img src="owner_dash.jpeg" width="200"></td>
+    <td><img src="trainee_dash.jpeg" width="200"></td>
   </tr>
 </table>
 
